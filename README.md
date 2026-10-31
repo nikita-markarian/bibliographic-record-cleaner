@@ -81,6 +81,35 @@ Run the automated tests:
 ```bash
 python -m pytest -q
 ```
+## Reproducibility
+
+The project supports two workflows with different reproducibility requirements.
+
+**Bibliographic quality audit.** The repository includes `data/annals_2020_2025.csv`, allowing users to reproduce the bibliography audit without accessing OpenAlex:
+
+```bash
+python -m src.run_audit
+```
+
+The automated tests can also be run offline:
+
+```bash
+python -m pytest -q
+```
+
+**Institutional affiliation audit.** The Strasbourg affiliation audit requires publication metadata retrieved from the OpenAlex API. To run it:
+
+```bash
+export OPENALEX_API_KEY="your_api_key"
+python src/inspect_strasbourg.py
+python src/audit_sample.py
+```
+
+The generated JSON and CSV files are not included in the repository.
+
+The affiliation audit may retrieve individual publication records from OpenAlex to verify potentially incomplete authorship lists. Consequently, it requires network access and may require a valid OpenAlex API key.
+
+**Limitations.** OpenAlex is a continuously updated database. Repeated downloads may return different records or metadata, so the exact results of the affiliation audit are not guaranteed to remain identical over time. The project demonstrates a reproducible analysis procedure rather than a permanently fixed bibliometric dataset.
 
 ## Example Results
 
