@@ -218,3 +218,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Generated OpenAlex data
+data/audit_results.csv
+data/strasbourg_sample.json
+
+# LibreOffice temporary files
+.~lock.*#
+
+# Local configuration
+.env.*
+!.env.example

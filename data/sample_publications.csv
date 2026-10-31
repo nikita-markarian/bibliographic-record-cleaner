@@ -1,0 +1,10 @@
+
+id,title,doi,year
+1,Introduction to Algebra,10.1234/ALG.001,2020
+2,Introduction to Algebra,https://doi.org/10.1234/ALG.001,2020
+3,Geometry and Topology,10.5678/GT.002,2021
+4,Geometry & Topology,,2021
+5,An Introduction to Geometry,10.9999/GEO.003,2022
+6,An Introduction to Geometry,10.9999/GEO.003,2022
+7,Homological Algebra,,2019
+
