@@ -58,6 +58,29 @@ README.md
 
 Set the `OPENALEX_API_KEY` environment variable to provide an API key.
 
+## Installation
+
+Requires Python 3.10 or later.
+
+Clone the repository and create a virtual environment:
+
+```bash
+git clone https://github.com/nikita-markarian/bibliographic-record-cleaner.git
+cd bibliographic-record-cleaner
+
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+Run the tests:
+
+```bash
+python -m pytest -q
+```
+
+The bibliography audit can be run without an OpenAlex API key using the included dataset. Downloading fresh publication metadata requires access to the OpenAlex API.
+
 ## Usage
 
 Run the Strasbourg publication retrieval:
